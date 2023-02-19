@@ -76,4 +76,19 @@ When you switch to a different branch, Git changes HEAD to point to that branch 
 
 ## Merging branches
 
-Switch back to the main branch
+Switch back to the main branch and merge in changes with git merge branchname
+
+If their are conflicts, you'll need to manually resolve them, then stage the merged file(s) then commit.
+
+git add filename
+git commit
+
+When you do the merge, git will give you a suitable commit message.
+
+### A merge is a commit with two parents.
+
+References in commits are used to track history.
+
+References in trees are used to track content. Retrieving a past state in git just goes into a commit and retrieves the trees and blobs from there. That's it!
+
+Git doesn't care about your working directory. When you move to another commit, Git just tracks trees and branches and loadings them according to the commit that's the HEAD. Objects are immutable. The working directory changes when you use git switch.

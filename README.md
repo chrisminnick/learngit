@@ -71,3 +71,9 @@ HEAD is a reference to a branch.
 To switch to a different branch:
 `git switch nameofbranch`
 You can also use git checkout, and it works the same in this case. Switch is a more recent command.
+
+When you switch to a different branch, Git changes HEAD to point to that branch and replaces the files and folders in the working directory to the ones in the commit pointed at by the branch.
+
+## Merging branches
+
+Switch back to the main branch

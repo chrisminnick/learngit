@@ -67,3 +67,7 @@ The current branch is stored in the HEAD
 `cat .git/HEAD`
 
 HEAD is a reference to a branch.
+
+To switch to a different branch:
+`git switch nameofbranch`
+You can also use git checkout, and it works the same in this case. Switch is a more recent command.

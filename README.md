@@ -97,4 +97,15 @@ When you merge from an ancestor, Git could do it the same way as when you merge 
 
 For example, if you create a branch named ideas from main, then make changes to main but not to ideas, you can make ideas point to the latest same commit as main by doing git merge main while ideas is the working directory. This is called a fast-forward.
 
-You can checkout any commit using git checkout. When you do this, the head doesn't change and you're not on a branch. This is called a detached head.
+You can checkout any commit using git checkout. The head will move to that commit. This is called a detached head because you're not on a branch. If you do commits in a detached head and then switch back to a branch, you leave those commits behind and they're unreachable unless you remember the hashes. Git will clean those up later (garbage collection). To save those, you can check them out and put a branch on it.
+
+## Rebasing
+
+Merging creates a commit with two parents. If you instead want to change the base of a branch so that it will contain all the commits from the original branch plus the commits made to the branch, you can use rebase.
+
+`git rebase main`
+
+Git rebase rearranges branches so they look like a single branch. What it actually does is to make copies of the branch's commits and adds them to the branch you're rebasing to, then moves the branch to the new commits. The old commits become impossible to reach and will be garbage collected.
+
+Why do we need rebase?
+Merging preserves history exactly as it happened.

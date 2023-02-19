@@ -111,3 +111,28 @@ Why do we need rebase?
 Merging preserves history exactly as it happened.
 
 Understanding Tags
+A tag is a label for a commit.
+
+git tag tagname
+or
+git tag tagname -a -m 'First release'
+
+git tag
+//lists the tags
+
+You can checkout tags by using git checkout.
+git checkout tagname
+
+Tags are kept in refs/tags
+
+cat .git/refs/tagname
+shows that the content is a hash
+
+git cat-file -t b93f3345
+Shows that the type of the hash is tag
+
+git cat-file -p b93f3345
+Shows that the content of the tag is a commit and an annotation.
+
+A tag is a reference (like a branch) to a commit.
+If you make a tag without -a, it will point directly to the commit.

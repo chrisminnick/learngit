@@ -96,3 +96,5 @@ Git doesn't care about your working directory. When you move to another commit, 
 When you merge from an ancestor, Git could do it the same way as when you merge a branch back into main, but that would be wasteful. Instead, git will make the branch just point to the latest commit of the branch you're merging.
 
 For example, if you create a branch named ideas from main, then make changes to main but not to ideas, you can make ideas point to the latest same commit as main by doing git merge main while ideas is the working directory. This is called a fast-forward.
+
+You can checkout any commit using git checkout. When you do this, the head doesn't change and you're not on a branch. This is called a detached head.

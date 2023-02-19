@@ -109,3 +109,5 @@ Git rebase rearranges branches so they look like a single branch. What it actual
 
 Why do we need rebase?
 Merging preserves history exactly as it happened.
+
+Understanding Tags

@@ -125,7 +125,7 @@ git checkout tagname
 
 Tags are kept in refs/tags
 
-cat .git/refs/tagname
+cat .git/refs/tags/tagname
 shows that the content is a hash
 
 git cat-file -t b93f3345

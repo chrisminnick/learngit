@@ -92,3 +92,7 @@ References in commits are used to track history.
 References in trees are used to track content. Retrieving a past state in git just goes into a commit and retrieves the trees and blobs from there. That's it!
 
 Git doesn't care about your working directory. When you move to another commit, Git just tracks trees and branches and loadings them according to the commit that's the HEAD. Objects are immutable. The working directory changes when you use git switch.
+
+When you merge from an ancestor, Git could do it the same way as when you merge a branch back into main, but that would be wasteful. Instead, git will make the branch just point to the latest commit of the branch you're merging.
+
+For example, if you create a branch named ideas from main, then make changes to main but not to ideas, you can make ideas point to the latest same commit as main by doing git merge main while ideas is the working directory. This is called a fast-forward.

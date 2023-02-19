@@ -135,4 +135,32 @@ git cat-file -p b93f3345
 Shows that the content of the tag is a commit and an annotation.
 
 A tag is a reference (like a branch) to a commit.
-If you make a tag without -a, it will point directly to the commit.
+If you make a tag without -a, it will point directly to the commit. This is a lightweight tag.
+
+A tag is like a branch that doesn't move.
+
+## Distributed Version Control
+
+git clone takes the address of a git repository and gets the files and the .git directory.
+
+git clone only gets the main branch by default.
+
+After you clone a repo, you can look at the `.git/config` file to find out information about the repo, including the remote that you cloned the project from....the default remote.
+
+You can find out all the branches on local and remote, you can use `git branch --all`
+
+Remotes and the current head point of origin are kep in `remotes/origin/HEAD`
+
+If you make changes on your local repo and no changes have been made to the remote, you can push to it easily.
+
+If you've made changes in your local and the remote has changed too, you first need to merge your local changes with the changes on remote.
+
+git fetch will get the remote changes and create a branch.
+
+You can then git merge that and resolve conflicts before pushing to the remote.
+
+The single command that does both a git fetch and a git merge is: git pull
+
+If you rebase commits that you've shared with other users, you're going to create problems. Never rebase shared commits.
+
+##Important Github features

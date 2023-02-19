@@ -164,3 +164,14 @@ The single command that does both a git fetch and a git merge is: git pull
 If you rebase commits that you've shared with other users, you're going to create problems. Never rebase shared commits.
 
 ##Important Github features
+
+Fork - a remote clone. By forking, you're creating your own remote that you can then clone it to you local.
+
+If you want to track changes to the original, you can add a 2nd remote, called upstream.
+
+Changes to the upstream can be pulled to your local repo.
+
+Changes to local can be pushed to your forked repo
+You can't push to upstream.
+
+You can send upstream a pull request, which is a message to the owner of upstream about your changes and if they want to they can pull it.

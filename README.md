@@ -1,3 +1,5 @@
+# Git Class
+
 - Git is a Distributed Revision Control System
 - Git is a Revision Control System
 - Git is a stupid content tracker - its a versioned file system
